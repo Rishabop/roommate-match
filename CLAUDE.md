@@ -12,7 +12,7 @@ I'm Rishab, a 1st-year B.Tech CSE student at RV University. This is my team's We
 | Prachi | Designs only |
 | Rishab (me) | Types the HTML and CSS |
 | Dhyan | Types the JavaScript (`logic.js`, `app.js`) with his own Claude Code |
-| Disha | Role not yet set |
+| Disha | Testing & documentation |
 
 **My part is the HTML and CSS:** Modules 1–2, plus CSS layout and units from Module 3. I type every line of it myself.
 
