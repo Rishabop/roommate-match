@@ -1,0 +1,9 @@
+# Personal Claude Code settings (each person has their own)
+.claude/settings.local.json
+
+# Mac and Office junk files
+.DS_Store
+~$*
+
+# Vercel's local link folder
+.vercel

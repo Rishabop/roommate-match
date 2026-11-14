@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roommate Match</title>
+    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Nunito+Sans:wght@400;700&display=swap">
+</head>
+<body>
+<header>
+    <p>Roommate Match</p>
+    <nav>
+        <a href="index.html">Start</a>
+        <a href="index.html#about">About the team</a>
+    </nav>
+    </header>
+    <main> 
+        <section class="screen" id="intro">
+            <h1>Roommate Match</h1>
+            <p>Answer 10 questions. See if you click.</p>
+            <button type="button" id="start-btn">Start</button>
+            <div id="about">
+                <h2>About the team</h2>
+                <div class="team-card">
+                    <img src="images/rishab.jpg" alt="Photo of Rishab">
+                    <h3>Rishab Bisht</h3>
+                    <p>HTML &amp; CSS</p>
+                </div>
+                <div class="team-card">
+                    <img src="images/prachi.jpg" alt="Photo of Prachi">
+                    <h3>Prachi Gogoi</h3>
+                    <p>Design</p>
+                </div>
+                <div class="team-card">
+                    <img src="images/dhyan.jpg" alt="Photo of Dhyan">
+                    <h3>Dhyan Prasad</h3>
+                    <p>JavaScript</p>
+                </div>
+                <div class="team-card">
+                    <img src="images/disha.jpg" alt="Photo of Disha">
+                    <h3>Disha Sujit</h3>
+                    <p>Type role of disha here</p>
+                </div>
+            </div>
+        </section>
+        <section class="screen" id="form-screen">
+            <p id="roommate-label">Roommate 1</p>
+            <h2>Answer every question</h2>
+            <form id="quiz-form">
+                <fieldset>
+                    <legend>1. When do you usually switch the lights off?</legend>
+                    <label><input type="radio" name="sleep" value="Before 11 pm"> Before 11 pm</label>
+                    <label><input type="radio" name="sleep" value="11 pm-1 am"> 11 pm-1 am</label>
+                    <label><input type="radio" name="sleep" value="After 1 am"> After 1 am</label>
+                </fieldset>
+                <fieldset>
+                    <legend>2. What AC temperature do you like?</legend>
+                    <label><input type="radio" name="ac" value="18-21°C"> 18-21&deg;C</label>
+                    <label><input type="radio" name="ac" value="22-24°C"> 22-24&deg;C</label>
+                    <label><input type="radio" name="ac" value="25-28°C"> 25-28&deg;C</label>
+                </fieldset>
+                <fieldset>
+                    <legend>3. How often do you clean your side of the room?</legend>
+                    <label><input type="radio" name="clean" value="Clean every day"> Clean every day</label>
+                    <label><input type="radio" name="clean" value="Once a week"> Once a week</label>
+                    <label><input type="radio" name="clean" value="When it gets messy"> When it gets messy</label>
+                </fieldset>
+                <fieldset>
+                    <legend>4. How often are guests okay in the room?</legend>
+                    <label><input type="radio" name="guests" value="Often"> Often</label>
+                    <label><input type="radio" name="guests" value="Sometimes, with notice"> Sometimes, with notice</label>
+                    <label><input type="radio" name="guests" value="Rarely or never"> Rarely or never</label>
+                </fieldset>
+                <fieldset>
+                    <legend>5. From what time should we talk in a quieter voice?</legend>
+                    <label><input type="radio" name="quiet" value="10 pm"> 10 pm</label>
+                    <label><input type="radio" name="quiet" value="11 pm"> 11 pm</label>
+                    <label><input type="radio" name="quiet" value="12 am"> 12 am</label>
+                    <label><input type="radio" name="quiet" value="No quiet time needed"> No quiet time needed</label>
+                </fieldset>
+                <fieldset>
+                    <legend>6. Do you study in the room?</legend>
+                    <label><input type="radio" name="study" value="Yes, need silence"> Yes, need silence</label>
+                    <label><input type="radio" name="study" value="Yes, noise is fine"> Yes, noise is fine</label>
+                    <label><input type="radio" name="study" value="No, I study elsewhere"> No, I study elsewhere</label>
+                </fieldset>
+                <fieldset>
+                    <legend>7. How long do you usually take in the bathroom?</legend>
+                    <label><input type="radio" name="bathroom" value="Under 10 min"> Under 10 min</label>
+                    <label><input type="radio" name="bathroom" value="10-20 min"> 10-20 min</label>
+                    <label><input type="radio" name="bathroom" value="Over 20 min"> Over 20 min</label>
+                </fieldset>
+                <fieldset>
+                    <legend>8. How do you feel about sharing things like chargers, snacks and toiletries?</legend>
+                    <label><input type="radio" name="sharing" value="Use anything"> Use anything</label>
+                    <label><input type="radio" name="sharing" value="Ask first"> Ask first</label>
+                    <label><input type="radio" name="sharing" value="Don't share"> Don't share</label>
+                </fieldset>
+                <fieldset>
+                    <legend>9. What food is okay in the room?</legend>
+                    <label><input type="radio" name="food" value="Veg only"> Veg only</label>
+                    <label><input type="radio" name="food" value="Veg and non-veg"> Veg and non-veg</label>
+                </fieldset>
+                <fieldset>
+                    <legend>10. How social are you?</legend>
+                    <label><input type="radio" name="social" value="Talk a lot"> Talk a lot</label>
+                    <label><input type="radio" name="social" value="Talk sometimes"> Talk sometimes</label>
+                    <label><input type="radio" name="social" value="Keep to myself"> Keep to myself</label>
+                </fieldset>
+
+                <p id="form-error" class="hidden">Please answer every question.</p>
+                <button type="submit">Submit</button>
+
+            </form>
+        </section>
+                <section class="screen" id="pass-screen">
+            <h2>Roommate 1 done!</h2>
+            <p>Hand over to Roommate 2.</p>
+            <button type="button" id="continue-btn">Continue</button>
+        </section>
+                <section class="screen" id="results-screen">
+            <h2>Your compatibility</h2>
+            <p id="score-circle"></p>
+
+            <h3>Answer by answer</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Roommate 1</th>
+                        <th>Roommate 2</th>
+                        <th>Match</th>
+                    </tr>
+                </thead>
+                <tbody id="results-body"></tbody>
+            </table>
+
+            <button type="button" id="swap-btn" class="hidden">Swap roommate</button>
+        </section>
+
+    </main>
+    <footer>
+        <p>Made by Rishab Bisht, Prachi Gogoi, Dhyan Prasad and Disha Sujit for CS1309 Web Technology, RV University</p>
+    </footer>
+
+
+<script src="logic.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

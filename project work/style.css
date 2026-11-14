@@ -1,0 +1,353 @@
+/* Hides any element with class="hidden". Dhyan's JS adds and removes this class. */
+.hidden {
+    display: none;
+}
+/* Whole page: background, text colour, body font */
+body {
+    margin: 0;
+    background-color: #F3EDE1;
+    color: #2A2A25;
+    font-family: "Nunito Sans", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* All headings and question titles use Lora */
+h1, h2, h3, legend {
+    font-family: Lora, Georgia, serif;
+    font-weight: 700;
+}
+
+h1 { font-size: 64px; }
+h2 { font-size: 44px; }
+legend { font-size: 20px; }
+/* Main area is at least 75% of the screen height (vh = 1% of the screen height),
+   so the footer stays near the bottom on short screens like "Roommate 1 done!".
+   display: flow-root stops the pass card's top margin "collapsing" out of main,
+   which was pushing main (and the footer) down past the bottom of a phone screen. */
+main {
+    min-height: 75vh;
+    display: flow-root;
+}
+
+/* Top bar: site name left, links right */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 60px;
+    background-color: #E3EBDF;
+    border-bottom: 1px solid #DCD3C3;
+}
+
+/* Site name in the top bar */
+header p {
+    margin: 0;
+    font-family: Lora, Georgia, serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Nav links: green, no underline, underline on hover */
+nav a {
+    margin-left: 24px;
+    color: #2F5D46;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Bottom bar */
+footer {
+    padding: 20px;
+    background-color: #E3EBDF;
+    border-top: 1px solid #DCD3C3;
+    text-align: center;
+    font-size: 14px;
+}
+/* Intro screen: everything centred, space at the top */
+#intro{
+    text-align: center;
+    padding-top: 80px;
+}
+/* About the team: warm-white band, smaller title */
+#about {
+    margin-top: 80px;
+    padding: 60px;
+    background-color: #FBF8F2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+#about h2 {
+    font-size: 32px;
+    width: 100%;
+}
+/* All buttons: green, rounded, soft shadow */
+button {
+    padding: 12px 32px;
+    background-color: #2F5D46;
+    color: white;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(42, 42, 37, 0.08);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.9;
+}
+/* One team member card */
+.team-card {
+    width: 220px;
+    padding: 24px;
+    background-color: white;
+    border: 1px solid #DCD3C3;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(42, 42, 37, 0.08);
+}
+
+/* Round photo. display: block + margin auto centres it and makes the browser
+   keep the 120px circle even when the photo file is missing.
+   The sage background is the placeholder colour until real photos are added. */
+.team-card img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #E3EBDF;
+}
+
+/* Role line under the name */
+.team-card p {
+    margin-top: 0;
+    color: #5B5A52;
+}
+/* Questions screen: one centred column */
+#form-screen {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* "Roommate 1" / "Roommate 2" label above the title */
+#roommate-label {
+    margin: 0;
+    color: #2F5D46;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* One question card */
+fieldset {
+    margin-bottom: 24px;
+    padding: 16px 24px;
+    background-color: #FBF8F2;
+    border: 1px solid #DCD3C3;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(42, 42, 37, 0.08);
+}
+
+/* Question title: browsers draw a legend ON the card's top border by default.
+   Floating it turns it into a normal box inside the card, so the border stays unbroken.
+   width: 100% keeps the answers on the lines below it. */
+fieldset legend {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 8px;
+}
+
+/* One answer row: radio + text, easy to tap */
+fieldset label {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    cursor: pointer;
+    clear: both; /* start below the floated question title, not beside it */
+}
+
+/* Space between the radio circle and its text */
+fieldset input {
+    margin-right: 12px;
+}
+
+/* "Please answer every question." box */
+#form-error {
+    padding: 12px 16px;
+    color: #B4473D;
+    background-color: #F7E3DF;
+    border-radius: 14px;
+    font-weight: 700;
+}
+/* Pass-the-device screen: one centred card */
+#pass-screen {
+    max-width: 480px;
+    margin: 60px auto;
+    padding: 40px;
+    text-align: center;
+    background-color: #FBF8F2;
+    border: 1px solid #DCD3C3;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(42, 42, 37, 0.08);
+}
+
+#pass-screen h2 {
+    margin-top: 0;
+    font-size: 36px;
+}
+/* Results screen: centred column */
+#results-screen {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Score circle: shape and size only, no colours (the band classes add them) */
+#score-circle {
+    width: 180px;
+    height: 180px;
+    margin: 24px auto;
+    border-radius: 50%;
+    line-height: 180px;
+    font-family: Lora, Georgia, serif;
+    font-size: 56px;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(42, 42, 37, 0.08);
+}
+
+/* Band colours: Dhyan's JS adds one of these to the circle */
+.score-high {
+    background-color: #2F5D46;
+    color: white;
+}
+
+.score-mid {
+    background-color: #D1A03A;
+    color: #2A2A25;
+}
+
+.score-low {
+    background-color: #B4473D;
+    color: white;
+}
+/* Results table: full width, single-line borders */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FBF8F2;
+    border: 1px solid #DCD3C3;
+    text-align: left;
+}
+
+#results-screen h3 {
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #DCD3C3;
+}
+
+/* Header row: sage */
+th {
+    background-color: #E3EBDF;
+}
+
+/* Row tints: Dhyan's JS adds one of these to each row */
+.match-row {
+    background-color: #EDF3EA;
+}
+
+.clash-row {
+    background-color: #F7E3DF;
+}
+
+/* Match column: centred, green ✓ or red ✗ */
+th:nth-child(4), td:nth-child(4) {
+    text-align: center;
+    font-weight: 700;
+}
+
+.match-row td:nth-child(4) {
+    color: #2F5D46;
+}
+
+.clash-row td:nth-child(4) {
+    color: #B4473D;
+}
+
+/* Space above the Swap roommate button */
+#swap-btn {
+    margin-top: 24px;
+}
+
+/* Phones: these rules only apply when the screen is 600px wide or less.
+   Each selector matches one used above, and comes later in the file, so it wins. */
+@media (max-width: 600px) {
+    h1 { font-size: 40px; }
+    h2 { font-size: 30px; }
+
+    header {
+        padding: 12px 16px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    nav a {
+        margin-left: 12px;
+        font-size: 15px;
+    }
+
+    #intro {
+        padding-top: 40px;
+    }
+
+    #about {
+        margin-top: 48px;
+        padding: 32px 16px;
+    }
+
+    #about h2 {
+        font-size: 26px;
+    }
+
+    fieldset {
+        padding: 12px 16px;
+    }
+
+    /* Submit fills the width, easy to tap */
+    #quiz-form button {
+        width: 100%;
+    }
+
+    #pass-screen {
+        margin: 32px 16px;
+        padding: 24px;
+    }
+
+    #pass-screen h2 {
+        font-size: 28px;
+    }
+
+    #score-circle {
+        width: 140px;
+        height: 140px;
+        line-height: 140px;
+        font-size: 44px;
+    }
+
+    th, td {
+        padding: 10px 8px;
+        font-size: 15px;
+    }
+}
